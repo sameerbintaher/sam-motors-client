@@ -28,13 +28,13 @@ const NavBar = () => {
       expand="lg"
       variant="light"
       fixed="top"
-      className={isSticky || isCollapsed ? "shadow-sm bg-white py-2" : "py-4"}
+      className={isSticky || isCollapsed ? "shadow-sm bg-dark py-2" : "py-4"}
     >
       <Navbar.Brand
         as={Link}
         to="/"
-        className="ml-md-5"
-        style={{ color: "#3a4256", fontSize: "1.55rem" }}
+        className="ml-md-5 text-white"
+        style={{ fontSize: "30px" }}
       >
         <img
           alt="Logo"
@@ -56,25 +56,25 @@ const NavBar = () => {
           <Nav.Link
             as={Link}
             to="/"
-            className="mr-md-5"
+            className="mr-md-5 text-white"
             onClick={() => window.scrollTo(500, 0)}
             active
           >
             Home
           </Nav.Link>
-          <Nav.Link href="#services" className="mr-md-5" active>
+          <Nav.Link href="#services" className="mr-md-5 text-white" active>
             Services
           </Nav.Link>
-          <Nav.Link href="#reviews" className="mr-md-5" active>
+          <Nav.Link href="#reviews" className="mr-md-5 text-white" active>
             Reviews
           </Nav.Link>
-          <Nav.Link href="#contact" className="mr-md-5" active>
+          <Nav.Link href="#contact" className="mr-md-5 text-white" active>
             Contact Us
           </Nav.Link>
           <Nav.Link
             as={Link}
             to="/dashboard/profile"
-            className="mr-md-5"
+            className="mr-md-5 text-white"
             active
           >
             Dashboard
@@ -87,7 +87,7 @@ const NavBar = () => {
             <Nav.Link
               as={Link}
               to="/login"
-              className="mr-md-5 px-4 btn btn-main"
+              className="mr-md-5 px-4 btn btn-primary text-white"
               active
             >
               Login

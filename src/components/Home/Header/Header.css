@@ -1,18 +1,6 @@
 .header-container {
   height: 100vh;
 }
-.header-container::after {
-  height: 100vh;
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 68%;
-  background-image: url("../../../images/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -50;
-}
 
 .navbar {
   transition: all 0.3s;
@@ -23,13 +11,17 @@
   font-weight: 500;
 }
 
+.bg {
+  background: rgb(0, 0, 0);
+}
+
 .banner {
   height: 100vh;
 }
 
 .banner h1 {
   font-size: 3.2rem;
-  color: #3a4256;
+  color: #000000;
 }
 
 .banner .btn {

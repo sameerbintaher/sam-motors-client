@@ -21,8 +21,8 @@ const Services = () => {
 
   return (
     <section id="services" className="text-center py-5">
-      <h5>What We Do</h5>
-      <h1>Services We Provide</h1>
+      <h5 className="text-dark">Services</h5>
+      <h1>Our Best Selling Bike</h1>
       <Row className="justify-content-center mx-auto mt-md-5 pt-5">
         {loading ? (
           <Spinner animation="border" variant="danger" />
