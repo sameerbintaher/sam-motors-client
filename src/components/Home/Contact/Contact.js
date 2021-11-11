@@ -13,7 +13,7 @@ const Contact = () => {
   const onSubmit = (data) => {
     const loading = toast.loading("Please wait...!");
     emailjs
-      .send("gmail", "gerez_template", data, "user_UhuudhC7XpS5QUo7xDWsT")
+      .send("gmail", "sam-motors_template", data, "user_UhuudhC7XpS5QUo7xDWsT")
       .then(
         (res) => {
           toast.dismiss(loading);

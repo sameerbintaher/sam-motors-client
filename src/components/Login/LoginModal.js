@@ -82,15 +82,14 @@ const Login = () => {
     toast.success("Successfully Logged In!");
     if (res.email === "admin@admin.com") {
       swal({
-        title: "Warning!",
+        title: "WOW!",
         content: (
           <p>
             You have entered the admin panel for testing.
             <br />
-            <b>Please do not abuse this facility!</b>
           </p>
         ),
-        icon: "warning",
+        icon: "success",
         buttons: true,
         dangerMode: true,
       }).then((ok) => {
@@ -136,12 +135,15 @@ const Login = () => {
                   type="password"
                 />
               </label>
-              <p className="forgot-pass">Forgot password?</p>
-              <button type="submit" className="submit">
+              <button type="submit" className="btn-primary my-4">
                 Sign In
               </button>
-              <button type="button" onClick={googleSignIn} className="fb-btn">
-                Connect with <span>Google</span>
+              <button
+                type="button"
+                onClick={googleSignIn}
+                className="btn-success"
+              >
+                <span>Google</span>
               </button>
             </form>
           </div>
@@ -149,14 +151,8 @@ const Login = () => {
             <div className="img">
               <div className="img__text m--up">
                 <h2>New here?</h2>
-                <p>Sign up and discover great amount of new opportunities!</p>
               </div>
-              <div className="img__text m--in">
-                <h2>One of us?</h2>
-                <p>
-                  If you already has an account, just sign in. We've missed you!
-                </p>
-              </div>
+
               <div onClick={() => setNewUser(!newUser)} className="img__btn">
                 <span className="m--up">Sign Up</span>
                 <span className="m--in">Sign In</span>
@@ -186,11 +182,8 @@ const Login = () => {
                     type="password"
                   />
                 </label>
-                <button type="submit" className="submit">
+                <button type="submit" className="btn-primary my-4">
                   Sign Up
-                </button>
-                <button type="button" onClick={googleSignIn} className="fb-btn">
-                  Join with <span>Google</span>
                 </button>
               </form>
             </div>

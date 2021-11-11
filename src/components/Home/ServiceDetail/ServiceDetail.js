@@ -12,7 +12,7 @@ const ServiceDetail = ({ service }) => {
       <Fade bottom duration={2500} distance="40px">
         <Card
           className="border-0 py-4"
-          style={{ maxWidth: "30rem", height: "29rem" }}
+          style={{ maxWidth: "30rem", height: "31rem" }}
         >
           <Card.Img
             variant="top"
