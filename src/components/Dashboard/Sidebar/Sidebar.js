@@ -113,10 +113,11 @@ const Sidebar = ({ show, adminLoading }) => {
           )}
         </ul>
       )}
-      <ul className="list-unstyled CTAs">
+      <ul className="">
         <li>
-          <Link to="/" className="back-home btn-main text-white">
-            <FontAwesomeIcon icon={faSignOutAlt} /> Back to Home
+          <Link to="/" className="btn btn-primary">
+            <FontAwesomeIcon icon={faSignOutAlt} />
+            Home
           </Link>
         </li>
       </ul>
