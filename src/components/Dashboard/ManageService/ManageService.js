@@ -27,29 +27,7 @@ const ManageService = () => {
       .catch((error) => toast.error(error.message));
   }, [editService]);
 
-  const restrictPermission = (id) => {
-    let matchedID = false;
-    for (let i = 0; i < 6; i++) {
-      const { _id } = services[i];
-      if (id === _id) {
-        matchedID = true;
-      }
-    }
-    if (email === "admin@admin.com" && matchedID) {
-      return true;
-    }
-    return false;
-  };
-
   const handleDeleteService = (id) => {
-    if (restrictPermission(id)) {
-      return swal(
-        "Permission restriction!",
-        "As a test-admin, you don't have permission to delete 6 core services. But you can delete your added services.",
-        "info"
-      );
-    }
-
     swal({
       title: "Are you sure?",
       text: "Are you sure you want to delete this service?",
@@ -93,11 +71,7 @@ const ManageService = () => {
   };
 
   return editService._id ? (
-    <AddService
-      editService={editService}
-      setEditService={setEditService}
-      restrictPermission={restrictPermission}
-    />
+    <AddService editService={editService} setEditService={setEditService} />
   ) : (
     <div
       className="px-5 pt-4 mx-md-4 mt-5 bg-white"

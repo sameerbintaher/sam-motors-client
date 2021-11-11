@@ -29,9 +29,9 @@ const Testimonials = () => {
     <section id="reviews" className="testimonials p-md-3">
       <Fade bottom duration={2500} distance="40px">
         <div className="my-5 py-4">
-          <div className="review-title text-center">
-            <span>What Our Clients Says</span>
-            <h2>Testimonials</h2>
+          <div className="text-white text-center">
+            <h1>User Reviews</h1>
+            <p>Explore what our says</p>
           </div>
           {loading ? (
             <div className="text-center">

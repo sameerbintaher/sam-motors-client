@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import swal from "sweetalert";
 import "./AddService.css";
 
-const AddService = ({ editService, restrictPermission, setEditService }) => {
+const AddService = ({ editService, setEditService }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
@@ -42,15 +42,6 @@ const AddService = ({ editService, restrictPermission, setEditService }) => {
     };
 
     if (editService) {
-      if (restrictPermission(editService._id)) {
-        toast.dismiss(loading);
-        setEditService({});
-        return swal(
-          "Permission restriction!",
-          "As a test-admin, you don't have permission to edit 6 core services. But you can edit your added services.",
-          "info"
-        );
-      }
       if (
         data.title === editService.title &&
         data.price === editService.price &&

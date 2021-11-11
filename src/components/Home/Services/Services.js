@@ -20,9 +20,13 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="text-center py-5">
-      <h5 className="text-dark">Services</h5>
-      <h1>Our Best Selling Bike</h1>
+    <section
+      id="services"
+      className="text-center py-5"
+      style={{ backgroundColor: "#000" }}
+    >
+      <h5 className="text-white">Services</h5>
+      <h1 className="text-white">Our Best Selling Bike</h1>
       <Row className="justify-content-center mx-auto mt-md-5 pt-5">
         {loading ? (
           <Spinner animation="border" variant="danger" />
