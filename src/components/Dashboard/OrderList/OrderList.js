@@ -14,7 +14,7 @@ const OrderList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://peaceful-lake-83415.herokuapp.com/orders?email=${email}`)
+      .get(`https://peaceful-lake-83415.herokuapp.com/orders?email=${email}`)
       .then((res) => {
         setOrders(res.data);
         setLoading(false);
@@ -36,7 +36,7 @@ const OrderList = () => {
 
     axios
       .patch(
-        "http://peaceful-lake-83415.herokuapp.com/updateOrderStatus",
+        "https://peaceful-lake-83415.herokuapp.com/updateOrderStatus",
         modifiedStatus
       )
       .then((res) => res.data && toast.success(`Set to ${status}`))

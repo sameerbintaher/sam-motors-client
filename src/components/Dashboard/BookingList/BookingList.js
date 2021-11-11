@@ -15,7 +15,7 @@ const BookingList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://peaceful-lake-83415.herokuapp.com/orders?email=${email}`)
+      .get(`https://peaceful-lake-83415.herokuapp.com/orders?email=${email}`)
       .then((res) => {
         setOrders(res.data);
         setLoading(false);

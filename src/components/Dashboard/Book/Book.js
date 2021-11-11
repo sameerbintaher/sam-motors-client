@@ -28,9 +28,9 @@ const Book = () => {
   const defaultOption = title
     ? { value: title, label: title, price: price }
     : options[0] || {
-        value: "Engine Repair",
-        label: "Engine Repair",
-        price: 25,
+        value: " ",
+        label: "Your Service",
+        price: "",
       };
 
   const [selectedOption, setSelectedOption] = useState(defaultOption);
@@ -40,7 +40,7 @@ const Book = () => {
 
   useEffect(() => {
     axios
-      .get("http://peaceful-lake-83415.herokuapp.com/services")
+      .get("https://peaceful-lake-83415.herokuapp.com/services")
       .then((res) => setServices(res.data))
       .catch((error) => toast.error(error.message));
   }, []);

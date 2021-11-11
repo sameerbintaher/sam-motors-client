@@ -74,7 +74,7 @@ const PaymentForm = ({ serviceInfo }) => {
     };
 
     axios
-      .post("http://peaceful-lake-83415.herokuapp.com/addOrder", orderDetails)
+      .post("https://peaceful-lake-83415.herokuapp.com/addOrder", orderDetails)
       .then((res) => {
         toast.dismiss(loading);
         if (res.data) {
@@ -161,11 +161,11 @@ const PaymentForm = ({ serviceInfo }) => {
         <div className="text-center mt-4">
           <Button
             type="submit"
-            className="btn-main"
+            className="btn-primary"
             disabled={!stripe}
             style={{ padding: ".68rem 2rem" }}
           >
-            Pay Now
+            Book
           </Button>
         </div>
       </Form>

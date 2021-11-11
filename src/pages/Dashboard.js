@@ -51,7 +51,7 @@ const Dashboard = ({ adminLoading }) => {
 
   useEffect(() => {
     axios
-      .get(`http://peaceful-lake-83415.herokuapp.com/reviews?email=${email}`)
+      .get(`https://peaceful-lake-83415.herokuapp.com/reviews?email=${email}`)
       .then((res) => {
         setReview(res.data);
         setLoadingReview(false);

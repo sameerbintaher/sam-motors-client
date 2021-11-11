@@ -17,7 +17,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("http://peaceful-lake-83415.herokuapp.com/reviews")
+      .get("https://peaceful-lake-83415.herokuapp.com/reviews")
       .then((res) => {
         setReviews(res.data);
         setLoading(false);

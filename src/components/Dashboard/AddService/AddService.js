@@ -54,7 +54,7 @@ const AddService = ({ editService, setEditService }) => {
       }
       axios
         .patch(
-          `http://peaceful-lake-83415.herokuapp.com/update/${editService._id}`,
+          `https://peaceful-lake-83415.herokuapp.com/update/${editService._id}`,
           serviceInfo
         )
         .then((res) => {
@@ -83,7 +83,7 @@ const AddService = ({ editService, setEditService }) => {
     }
 
     axios
-      .post("http://peaceful-lake-83415.herokuapp.com/addService", serviceInfo)
+      .post("https://peaceful-lake-83415.herokuapp.com/addService", serviceInfo)
       .then((res) => {
         toast.dismiss(loading);
         if (res.data) {

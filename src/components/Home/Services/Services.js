@@ -11,7 +11,7 @@ const Services = () => {
 
   useEffect(() => {
     axios
-      .get("http://peaceful-lake-83415.herokuapp.com/services")
+      .get("https://peaceful-lake-83415.herokuapp.com/services")
       .then((res) => {
         setServices(res.data);
         setLoading(false);

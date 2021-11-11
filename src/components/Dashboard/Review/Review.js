@@ -23,7 +23,9 @@ const Review = ({
       if (wantDelete) {
         const loading = toast.loading("Deleting...Please wait!");
         axios
-          .delete(`http://peaceful-lake-83415.herokuapp.com/deleteReview/${id}`)
+          .delete(
+            `https://peaceful-lake-83415.herokuapp.com/deleteReview/${id}`
+          )
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

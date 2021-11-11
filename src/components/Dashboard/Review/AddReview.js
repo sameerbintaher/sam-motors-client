@@ -20,7 +20,7 @@ const AddReview = ({ review, setReview, edit, setEdit }) => {
     if (edit) {
       axios
         .patch(
-          `http://peaceful-lake-83415.herokuapp.com/updateReview/${review._id}`,
+          `https://peaceful-lake-83415.herokuapp.com/updateReview/${review._id}`,
           data
         )
         .then((res) => {
@@ -55,7 +55,7 @@ const AddReview = ({ review, setReview, edit, setEdit }) => {
     }
 
     axios
-      .post("http://peaceful-lake-83415.herokuapp.com/addReview", data)
+      .post("https://peaceful-lake-83415.herokuapp.com/addReview", data)
       .then((res) => {
         toast.dismiss(loading);
         if (res.data) {

@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://peaceful-lake-83415.herokuapp.com/isAdmin?email=${loggedInUser?.email}`
+        `https://peaceful-lake-83415.herokuapp.com/isAdmin?email=${loggedInUser?.email}`
       )
       .then((res) => {
         setIsAdmin(res.data);
