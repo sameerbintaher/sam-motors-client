@@ -92,7 +92,7 @@ const Book = () => {
       >
         <Toast.Header>
           <img src={infoEmojis} className="rounded mr-2" alt="Info" />
-          <strong className="mr-auto">Important Info</strong>
+          <strong className="mr-auto">Please Use this info</strong>
         </Toast.Header>
         <Toast.Body className="text-center">
           Use this Card Number to test the payment

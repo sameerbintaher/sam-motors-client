@@ -140,7 +140,8 @@ const PaymentForm = ({ serviceInfo }) => {
             <Col md={6} xs={12} className="pl-md-4">
               <div>
                 <Form.Label style={{ fontWeight: "bold" }}>
-                  Card Number
+                  Card Number (
+                  <span className="text-muted">use 4242 4242 4242 4242</span>)
                 </Form.Label>
                 <CardNumberElement className="form-control" options={options} />
               </div>
