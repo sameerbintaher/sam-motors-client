@@ -3,6 +3,7 @@ import { createContext, lazy, Suspense, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Explore from "./components/Home/Explore/Explore";
 import LoadingSpinner from "./components/Home/LoadingSpinner/LoadingSpinner";
 import { getDecodedUser } from "./components/Login/LoginManager";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -46,6 +47,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/explore">
+              <Explore />
             </Route>
             <PrivateRoute path="/dashboard/:panel">
               <Dashboard adminLoading={adminLoading} />

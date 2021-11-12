@@ -31,9 +31,11 @@ const Services = () => {
         {loading ? (
           <Spinner animation="border" variant="danger" />
         ) : (
-          services.map((service) => (
-            <ServiceDetail key={service._id} service={service} />
-          ))
+          services
+            .slice(0, 6)
+            .map((service) => (
+              <ServiceDetail key={service._id} service={service} />
+            ))
         )}
       </Row>
     </section>

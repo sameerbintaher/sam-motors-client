@@ -62,8 +62,13 @@ const NavBar = () => {
           >
             Home
           </Nav.Link>
-          <Nav.Link href="#services" className="mr-md-5 text-white" active>
-            Services
+          <Nav.Link
+            as={Link}
+            to="/explore"
+            className="mr-md-5 text-white"
+            active
+          >
+            Explore
           </Nav.Link>
           <Nav.Link href="#reviews" className="mr-md-5 text-white" active>
             Reviews
